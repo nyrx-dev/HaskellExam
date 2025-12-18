@@ -46,7 +46,7 @@ player2Keys =
 spriteWithCircleHeadAndSquares :: [(Key, Dir)] -> Color -> Cell -> SProg ()
 spriteWithCircleHeadAndSquares keys col startPos =
     NewSprite startPos
-        (Color col $ circleSolid (cellSize * 0.6))
+        (Color col $ circleSolid (cellSize * 0.5))
         (\headPtr ->
             let
                 makeBody :: Int -> SpritePtr -> [Cell] -> SProg ()
@@ -57,7 +57,7 @@ spriteWithCircleHeadAndSquares keys col startPos =
                                         (c:_) -> (fst c, snd c - 1)
                                         []    -> let (sx, sy) = startPos in (sx, sy - n)
                     in NewSprite startCell'
-                            (Color col $ rectangleSolid (cellSize * 0.8) (cellSize * 0.8))
+                            (Color col $ rectangleSolid (cellSize * 0.95) (cellSize * 0.95))
                             (\bodyPtr ->
                                 -- Each segment follows the previous segment's last cell
                                 OnTargetUpdated prevPtr (\oldCell _newCell -> SetTarget bodyPtr oldCell (Pure ())) $
