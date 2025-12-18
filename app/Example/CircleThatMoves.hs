@@ -58,8 +58,8 @@ makeBody _ _ 0 _ _ = Pure () -- No more segments
 makeBody col startPos n prevPtr prevCells =
     -- Start each segment below the previous
     let startCell' = case prevCells of
-            (c : _) -> (fst c, snd c - 1)
-            [] -> let (sx, sy) = startPos in (sx, sy - n)
+            (c : _) -> nextCell D c
+            [] -> iterate (nextCell D) startPos !! n
      in NewSprite
             startCell'
             (Color col $ rectangleSolid (cellSize * 0.95) (cellSize * 0.95))
