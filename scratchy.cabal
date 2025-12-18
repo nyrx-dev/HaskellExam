@@ -62,7 +62,7 @@ executable scratchy
     other-modules:    Scratchy
                     , Scratchy.Syntax
                     , Scratchy.World
-                    , Example.CircleThatMoves
+                    , Game.CircleThatMoves
                         
 
     -- LANGUAGE extensions used by modules in this package.

@@ -1,4 +1,4 @@
-module Example.CircleThatMoves where
+module Game.Snake where
 
 import Graphics.Gloss.Interface.Pure.Game
 import Scratchy.Syntax

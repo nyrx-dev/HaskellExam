@@ -5,7 +5,7 @@ import Graphics.Gloss.Interface.Pure.Game
 import Scratchy.World
 import Scratchy.Syntax
 
-import Example.CircleThatMoves
+import Game.Snake
 
 -- Main
 ------------------------------------------------------------
