@@ -1,0 +1,8 @@
+cradle:
+  cabal:
+    - path: "app/Main.hs"
+      component: "scratchy:exe:scratchy"
+    - path: "app"
+      component: "scratchy:exe:scratchy"
+    - path: "test"
+      component: "scratchy:test:scratchy-test"
