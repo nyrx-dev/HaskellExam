@@ -79,3 +79,21 @@ executable scratchy
 
     -- Base language which the package is written in.
     default-language: Haskell2010
+
+test-suite scratchy-test
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test, app
+    main-is:          Spec.hs
+    other-modules:    Game.Snake
+                    , Scratchy.Syntax
+                    , Scratchy.World
+                    , Scratchy
+                    , SnakeSpec
+    build-depends:    base ^>=4.21.0.0
+                    , hspec
+                    , gloss
+    build-tool-depends: hspec-discover:hspec-discover
+    default-extensions: RecordWildCards
+                      , DeriveFunctor
